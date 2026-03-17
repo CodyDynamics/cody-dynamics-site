@@ -222,10 +222,10 @@ export default function HomePage() {
           </p>
 
           <div className="hero-actions center-actions">
-            <a className="btn btn-primary" href="mailto:you@example.com">
+            <a className="btn btn-primary" href="mailto:vinh.nguyen@codydynamics.com">
               Email Us
             </a>
-            <a className="btn btn-secondary" href="https://calendly.com/your-link">
+            <a className="btn btn-secondary" href="#">
               Book a Strategy Call
             </a>
           </div>
