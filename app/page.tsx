@@ -225,7 +225,7 @@ export default function HomePage() {
             <a className="btn btn-primary" href="mailto:vinh.nguyen@codydynamics.com">
               Email Us
             </a>
-            <a className="btn btn-secondary" href="#">
+            <a className="btn btn-secondary" href="tel:(469)878-3932">
               Book a Strategy Call
             </a>
           </div>
