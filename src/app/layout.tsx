@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Visily Community Landing",
-  description: "Responsive landing page built with Next.js, Tailwind v4, shadcn/ui, and Framer Motion.",
+  title: "Cody Dynamics",
+  description: "AI-powered Revenue Cycle Automation Platform designed for enterprise healthcare.",
 };
 
 export default function RootLayout({
