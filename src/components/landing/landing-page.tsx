@@ -16,11 +16,20 @@ import {
 } from "lucide-react";
 
 import { CoreAiModuleSection } from "@/components/landing/core-ai-module-section";
+import { ModernPlatformSections } from "@/components/landing/modern-platform-sections";
+import { TestimonialsSection } from "@/components/landing/testimonials-section";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { formatApiError } from "@/lib/format-api-error";
 import { cn } from "@/lib/utils";
 
-const navItems = ["Product", "Solutions", "Pricing", "Resources", "Company"];
+const navItems = [
+  { label: "Product", href: "#" },
+  { label: "Solutions", href: "#" },
+  { label: "Pricing", href: "#" },
+  { label: "Resources", href: "#" },
+  { label: "Company", href: "#" },
+  { label: "Testimonials", href: "#testimonials" },
+];
 
 const partnerItems = [
   { label: "MediCorp", icon: Building2 },
@@ -233,8 +242,8 @@ export function LandingPage() {
           </a>
           <nav className="hidden items-center gap-6 text-sm text-[#bdc1ca] lg:flex" aria-label="Main navigation">
             {navItems.map((item) => (
-              <a key={item} href="#" className="transition-colors hover:text-white">
-                {item}
+              <a key={item.label} href={item.href} className="transition-colors hover:text-white">
+                {item.label}
               </a>
             ))}
           </nav>
@@ -278,7 +287,7 @@ export function LandingPage() {
         </div>
       </header>
 
-      <section className="mx-auto grid w-full max-w-[1248px] gap-14 px-4 pb-16 pt-16 md:px-8 lg:grid-cols-[1.08fr_1fr] lg:items-center lg:pt-24">
+      <section id="overview" className="scroll-mt-[72px] mx-auto grid w-full max-w-[1248px] gap-14 px-4 pb-16 pt-16 md:px-8 lg:grid-cols-[1.08fr_1fr] lg:items-center lg:pt-24">
         <motion.div
           initial="hidden"
           animate="show"
@@ -382,7 +391,7 @@ export function LandingPage() {
         </motion.div>
       </section>
 
-      <section className="border-y border-[#32374380] bg-[#171a1f33]">
+      <section id="brands" className="scroll-mt-[72px] border-y border-[#32374380] bg-[#171a1f33]">
         <div className="mx-auto w-full max-w-[1248px] px-4 py-10 md:px-8">
           <p className="text-center text-xs font-medium uppercase tracking-[0.16em] text-[#bdc1ca]">
             Trusted by leading healthcare enterprises
@@ -413,7 +422,60 @@ export function LandingPage() {
         </div>
       </section>
 
-      <footer className="bg-[#0a0d14] text-[#a7adba]">
+      <ModernPlatformSections />
+
+      <TestimonialsSection />
+
+      <section
+        id="team"
+        className="scroll-mt-[72px] border-y border-[#32374380] bg-[#0a0b0f]"
+      >
+        <div className="mx-auto w-full max-w-[1248px] px-4 py-14 md:px-8 md:py-16">
+          <h2 className="text-2xl font-bold text-[#f3f4f6] md:text-3xl">Team</h2>
+          <p className="mt-3 max-w-[720px] text-[#bdc1ca]">
+            Implementation strategists, certified coders, and automation engineers who
+            work alongside your revenue-cycle and IT leaders from kickoff through
+            steady-state operations.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="recordings"
+        className="scroll-mt-[72px] border-y border-[#32374380] bg-[#050507]"
+      >
+        <div className="mx-auto w-full max-w-[1248px] px-4 py-14 md:px-8 md:py-16">
+          <h2 className="text-2xl font-bold text-[#f3f4f6] md:text-3xl">Recordings</h2>
+          <p className="mt-3 max-w-[720px] text-[#bdc1ca]">
+            Product walkthroughs and customer conversations on prior authorization,
+            denial prevention, and analytics—available on demand for your steering
+            committee.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="key-reasons"
+        className="scroll-mt-[72px] border-y border-[#32374380] bg-[#0a0b0f]"
+      >
+        <div className="mx-auto w-full max-w-[1248px] px-4 py-14 md:px-8 md:py-16">
+          <h2 className="text-2xl font-bold text-[#f3f4f6] md:text-3xl">Key reasons</h2>
+          <ul className="mt-5 grid gap-3 text-[#bdc1ca] md:max-w-[720px]">
+            {[
+              "Measurable lift in clean claims and cash acceleration",
+              "Automation that augments staff—not another swivel-chair workflow",
+              "Enterprise-grade security and audit trails across modules",
+            ].map((reason) => (
+              <li key={reason} className="flex gap-2">
+                <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#6941c6]" />
+                <span>{reason}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <footer id="contact" className="scroll-mt-[72px] bg-[#0a0d14] text-[#a7adba]">
         <div className="mx-auto w-full max-w-[1248px] px-4 py-14 md:px-8">
           <div className="grid gap-10 md:grid-cols-[1.2fr_3fr]">
             <div>
